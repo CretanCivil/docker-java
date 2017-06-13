@@ -1,0 +1,22 @@
+# PHP
+#export WEB_PATH=/Users/wangxiaohua/php/ddapi
+#export REDIS_DATA_PATH=/tmp/redis_data
+#$ docker-compose up          # WEB_PATH will be /Users/wangxiaohua/php/ddapi
+
+version: '2'
+
+services:
+
+  tomcat:
+    build: ./images
+    external_links:
+      - redis:redis.docker
+      - rabbitmq:rabbitmq.docker
+      - tsdbrelay:tsdbrelay.docker
+      - bosun:bosun.docker
+    networks:
+      - dockerbosun_default
+networks:
+  dockerbosun_default:
+    external: true
+ 
