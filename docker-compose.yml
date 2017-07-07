@@ -14,6 +14,8 @@ services:
       - rabbitmq:rabbitmq.docker
       - tsdbrelay:tsdbrelay.docker
       - bosun:bosun.docker
+    ports: 
+      - "8080:8080"  
     networks:
       - dockerbosun_default
 networks:
