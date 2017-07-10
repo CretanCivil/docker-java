@@ -15,7 +15,9 @@ services:
       - tsdbrelay:tsdbrelay.docker
       - bosun:bosun.docker
     ports: 
-      - "8080:8080"  
+      - "8080:8080"
+    volumes:
+      - ./images/tomcat:/bitnami/tomcat/conf/
     networks:
       - dockerbosun_default
 networks:
