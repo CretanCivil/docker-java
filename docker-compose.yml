@@ -16,8 +16,7 @@ services:
       - bosun:bosun.docker
     ports: 
       - "8080:8080"
-    volumes:
-      - ./images/server:/bitnami
+    command: /opt/tomcat/bin/catalina.sh run
     networks:
       - dockerbosun_default
 networks:
