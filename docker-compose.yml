@@ -17,7 +17,7 @@ services:
     ports: 
       - "8080:8080"
     volumes:
-      - ./images:/bitnami
+      - ./images/server:/bitnami
     networks:
       - dockerbosun_default
 networks:
