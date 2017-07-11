@@ -17,6 +17,8 @@ services:
     ports: 
       - "8080:8080"
     command: /opt/tomcat/bin/catalina.sh run
+    volumes:
+      - ./server:/opt/tomcat
     networks:
       - dockerbosun_default
 networks:
