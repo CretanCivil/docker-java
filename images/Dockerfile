@@ -1,5 +1,6 @@
 #FROM tomcat:8.5.15-jre8-alpine
-FROM bitnami/tomcat:latest
+#FROM bitnami/tomcat:latest
+FROM davidcaste/alpine-tomcat:jdk8tomcat7
 MAINTAINER leapar <leapar@gmail.com>
 
 ADD conf/systemInfo.properties /opt/systemInfo.properties
