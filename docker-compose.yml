@@ -20,6 +20,7 @@ services:
     #  - TOMCAT_HOME:/opt/tomcat
     volumes:
       - ./server:/opt/tomcat
+    command: /opt/tomcat/bin/catalina.sh run  
     networks:
       - dockerbosun_default
 networks:
