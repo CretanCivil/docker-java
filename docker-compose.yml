@@ -16,6 +16,8 @@ services:
       - bosun:bosun.docker
     ports: 
       - "8080:8080"
+    environment:
+      - TOMCAT_HOME:/opt/tomcat
     volumes:
       - ./server:/opt/tomcat
     networks:
