@@ -18,8 +18,11 @@ services:
       - "8080:8080"
     #environment:
     #  - TOMCAT_HOME:/opt/tomcat
-    #volumes:
+    volumes:
     #  - ./server:/opt/tomcat
+      - ./images/conf/systemInfo.properties:/opt/systemInfo.properties
+      - ./images/conf/opentsdb.properties:/opt/opentsdb.properties
+      - ./images/conf/tomcat/war/apmsys.war:/opt/tomcat/webapps/apmsys.war 
     # command: /opt/tomcat/bin/catalina.sh run  
     networks:
       - dockerbosun_default
