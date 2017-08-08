@@ -15,12 +15,7 @@ ADD conf/opentsdb.properties /opt/opentsdb.properties
 ADD conf/tomcat/war/apmsys.war /opt/tomcat/webapps/apmsys.war
 ADD conf/tomcat/war/alarm-service.war /opt/tomcat/webapps/alarm-service.war
  
-ADD tomcat/server.xml /opt/tomcat/conf/server.xml 
-
-#docker run  -e MYSQL_ROOT_PASSWORD=123456 -e MYSQL_ROOT_HOST=% -p 3306:3306 -d mysql/mysql-server:5.7
-
-
-
-
+ADD tomcat/server.xml /opt/tomcat/conf/server.xml
+ADD tomcat/logging.properties /opt/tomcat/conf/logging.properties
 
 CMD ["/opt/tomcat/bin/catalina.sh","run"]
