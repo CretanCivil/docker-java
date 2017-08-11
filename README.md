@@ -10,6 +10,7 @@ docker build -t leapar/tomcat:0.1 .
 
 ```
 docker run -it --rm -p 8080:8080 leapar/tomcat:0.1
+docker-compose up --no-recreate
 ```
 
 依赖 https://github.com/whpv/docker-bosun
